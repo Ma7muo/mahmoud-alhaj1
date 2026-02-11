@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       background-color: #0f172a;
       color: #e5e7eb;
+      scroll-behavior: smooth;
     }
 
     /* Navbar */
@@ -20,6 +21,9 @@
       align-items: center;
       padding: 20px 40px;
       background-color: #020617;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     header h1 {
@@ -67,6 +71,7 @@
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
+      transition: 0.3s;
     }
 
     .btn-primary {
@@ -74,9 +79,17 @@
       color: #020617;
     }
 
+    .btn-primary:hover {
+      opacity: 0.8;
+    }
+
     .btn-secondary {
       border: 1px solid #38bdf8;
       color: #38bdf8;
+    }
+
+    .btn-secondary:hover {
+      opacity: 0.8;
     }
 
     /* Sections */
@@ -137,47 +150,48 @@
 <header>
   <h1>Mahmoud Al-Haj</h1>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Learn</a>
-    <a href="#">CS2</a>
-    <a href="#">Tools</a>
+    <a href="#home">Home</a>
+    <a href="#learn">Learn</a>
+    <a href="#cs2-card">CS2</a>
+    <a href="#training-card">Tools</a>
+    <a href="#downloads-card">Downloads</a>
     <a href="#">Login</a>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <h2>Learn Web Development From Scratch</h2>
   <p>
-    Professional tutorials, legal CS2 content,
-    training tools, and real projects.
+    Professional tutorials, legal CS2 content, training tools,
+    and real projects — all in one place.
   </p>
 
   <div class="buttons">
-    <a href="#" class="btn-primary">Start Learning</a>
-    <a href="#" class="btn-secondary">Explore Content</a>
+    <a href="#learn" class="btn-primary">Start Learning</a>
+    <a href="#downloads-card" class="btn-secondary">Explore Content</a>
   </div>
 </section>
 
-<section class="sections">
+<section class="sections" id="learn">
   <h3>Main Sections</h3>
 
   <div class="cards">
-    <div class="card">
+    <div class="card" id="learn-card">
       <h4>Learn Web</h4>
       <p>HTML, CSS, JavaScript tutorials from scratch.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="cs2-card">
       <h4>CS2 Content</h4>
       <p>Legal configs, pro settings, and tips.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="training-card">
       <h4>Training Tools</h4>
       <p>Aim training, reaction tests, calculators.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="downloads-card">
       <h4>Downloads</h4>
       <p>Open-source tools and legal mods.</p>
     </div>
