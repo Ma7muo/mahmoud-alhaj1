@@ -13,6 +13,7 @@
       color: #e5e7eb;
     }
 
+    /* Navbar */
     header {
       display: flex;
       justify-content: space-between;
@@ -37,6 +38,7 @@
       color: #38bdf8;
     }
 
+    /* Hero */
     .hero {
       padding: 90px 40px;
       text-align: center;
@@ -77,6 +79,49 @@
       color: #38bdf8;
     }
 
+    /* Sections */
+    .sections {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .sections h3 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #111827;
+      padding: 30px;
+      border-radius: 14px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card h4 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+    }
+
+    /* Footer */
     footer {
       margin-top: 80px;
       padding: 25px;
@@ -103,13 +148,39 @@
 <section class="hero">
   <h2>Learn Web Development From Scratch</h2>
   <p>
-    Build professional websites, learn programming,
-    and explore legal CS2 tools and training content.
+    Professional tutorials, legal CS2 content,
+    training tools, and real projects.
   </p>
 
   <div class="buttons">
     <a href="#" class="btn-primary">Start Learning</a>
     <a href="#" class="btn-secondary">Explore Content</a>
+  </div>
+</section>
+
+<section class="sections">
+  <h3>Main Sections</h3>
+
+  <div class="cards">
+    <div class="card">
+      <h4>Learn Web</h4>
+      <p>HTML, CSS, JavaScript tutorials from scratch.</p>
+    </div>
+
+    <div class="card">
+      <h4>CS2 Content</h4>
+      <p>Legal configs, pro settings, and tips.</p>
+    </div>
+
+    <div class="card">
+      <h4>Training Tools</h4>
+      <p>Aim training, reaction tests, calculators.</p>
+    </div>
+
+    <div class="card">
+      <h4>Downloads</h4>
+      <p>Open-source tools and legal mods.</p>
+    </div>
   </div>
 </section>
 
